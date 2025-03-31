@@ -1,0 +1,7 @@
+from skimage.feature import graycomatrix, graycoprops  
+
+# Compute GLCM matrix for texture analysis  
+glcm = graycomatrix(gray, distances=[1], angles=[0], symmetric=True, normed=True)  
+contrast = graycoprops(glcm, 'contrast')[0, 0]  
+energy = graycoprops(glcm, 'energy')[0, 0]  
+print(f"Contrast: {contrast}, Energy: {energy}")

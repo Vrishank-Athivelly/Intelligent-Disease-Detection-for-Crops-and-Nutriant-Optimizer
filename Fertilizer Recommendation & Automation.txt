@@ -1,0 +1,7 @@
+fertilizer_recommendation = {
+    0: "Nitrogen-rich Fertilizer",  
+    1: "Phosphorus-based Fertilizer",  
+    2: "Potassium-based Fertilizer",  
+}
+
+print(f"Recommended Fertilizer: {fertilizer_recommendation[disease_label]}")

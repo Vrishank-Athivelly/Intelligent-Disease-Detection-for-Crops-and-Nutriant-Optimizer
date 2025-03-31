@@ -1,0 +1,14 @@
+from tensorflow.keras.models import load_model  
+import numpy as np  
+
+# Load the pre-trained model (custom-trained on plant images)  
+model = load_model("plant_disease_model.h5")  
+
+# Preprocess the image for classification  
+image_resized = cv2.resize(image, (128, 128))  # Resize to model's input size  
+image_array = np.expand_dims(image_resized, axis=0)  # Add batch dimension  
+
+# Predict disease  
+prediction = model.predict(image_array)  
+disease_label = np.argmax(prediction)  # Get disease category  
+print(f"Disease Detected: {disease_label}")

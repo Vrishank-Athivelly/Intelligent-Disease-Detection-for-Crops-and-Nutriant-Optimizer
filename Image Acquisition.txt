@@ -1,0 +1,6 @@
+import cv2  
+camera = cv2.VideoCapture(0)  # Open the camera
+ret, image = camera.read()  # Capture an image
+cv2.imwrite("leaf.jpg", image)  # Save the image
+camera.release()
+
