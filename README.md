@@ -1,0 +1,1 @@
+# Intelligent-Disease-Detection-for-Crops-and-Nutriant-Optimizer
